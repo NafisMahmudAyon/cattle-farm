@@ -1,3 +1,4 @@
+@import "aspect-ui/css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,7 +16,17 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  @apply text-primary-200 dark:text-primary-200 bg-primary-900 dark:bg-primary-900;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.light-scrollbar::-webkit-scrollbar {
+  width: 5px !important;
+}
+.light-scrollbar::-webkit-scrollbar-track {
+  display: none;
+}
+
+.light-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-800 dark:bg-gray-200 rounded;
 }
